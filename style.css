@@ -1,0 +1,77 @@
+
+#header {
+height: 750px;
+background-image:url(img/caught-in-joy-ptVBlniJi50-unsplash.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+padding: 10px;
+
+
+a {
+   color: white;
+   text-decoration: none;
+}
+
+#header a:hover {
+   color: #007bff;
+}
+
+p{
+   font-family: "Libre Barcode 39 Extended Text", serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 40px;
+}
+
+#centerheader{
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+}
+
+#rightheader{
+   align-items: center;
+   display: flex;
+   justify-content: flex-end;
+}
+
+.home{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+flex-direction: column;
+}
+}
+
+.home img {
+   width: 100%;
+   height: auto;
+}
+
+@media (max-width: 998px) {
+   .home img {
+       width: 60%; 
+   }
+}
+
+@media (max-width: 480px) {
+   .home img {
+       width: 40%; 
+   }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+}
+h1{
+    font-size: 8vw;
+    -webkit-text-stroke: 1px white;
+
+}
+h2{
+    font-size: 52px;
+}
