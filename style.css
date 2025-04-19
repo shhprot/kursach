@@ -47,6 +47,12 @@ p{
    justify-content: flex-end;
 }
 
+.custom-scroll-btn {
+   width: 60px;
+   height: 60px;
+   font-size: 1.8rem;
+}
+
 .home{
 display: flex;
 flex-wrap: wrap;
@@ -56,7 +62,7 @@ flex-direction: column;
 }
 
 .home img {
-   width: 100%;
+   width: 400px;
    height: auto;
 }
 
@@ -85,11 +91,14 @@ h2{
 }
 
 
-
 #main{
    background-image:url(img/fl-studio-63y7atl853976s8l.jpg);
    background-repeat: no-repeat;
    background-size:100% ;
+   display: flex;
+   height: 750px;
+   padding: 0;
+   margin: 0;
 }
 
 #main h2{
@@ -104,7 +113,176 @@ h2{
  
 #name{
    font-size: 60px;
+   width: 100%;
+   height: 1100px;
+}
+
+ 
+ #maincollaider {
+   flex: 1;
+   height: 900px;
+   width: 300px;
+   padding: 20px;
+ }
+ 
+ #image-scroll-container {
+   width: 550px;
+   position: relative;
+   overflow: hidden;
+   background-color: rgba(0, 0, 0, 0.05);
+   border-left: 1px solid rgba(0, 0, 0, 0.1);
+   padding: 20px;
+ }
+ 
+
+ @keyframes scrollUp {
+   0% {
+       transform: translateY(100%);
+       opacity: 0;
+   }
+   10% {
+       opacity: 1;
+       transform: translateY(0);
+   }
+   20% {
+       opacity: 1;
+       transform: translateY(0);
+   }
+   30% {
+       opacity: 0;
+       transform: translateY(-100%);
+   }
+   100% {
+       opacity: 0;
+       transform: translateY(-100%);
+   }
+}
+
+.scrolling-image {
+   position: absolute;
+   width: 500px;
+   animation: scrollUp 15s linear infinite;
+   opacity: 0;
 }
 
 
-/**/
+.scrolling-image:nth-child(1) { animation-delay: 0s; border-radius: 10px;}
+.scrolling-image:nth-child(2) { animation-delay: 3s; border-radius: 10px;}
+.scrolling-image:nth-child(3) { animation-delay: 6s; border-radius: 10px;}
+.scrolling-image:nth-child(4) { animation-delay: 9s; border-radius: 10px;}
+.scrolling-image:nth-child(5) { animation-delay: 12s; border-radius: 10px;}
+ 
+
+ .transparent-container {
+   background-color: rgba(255, 255, 255, 0.7);
+   padding: 20px;
+   border-radius: 10px;
+   max-width: 800px;
+   height: 700px;
+   padding: 20px;
+ }
+
+ .bio-container {
+   max-width: 600px;
+   padding: 2rem;
+   background: rgba(0,0,0,0.7);
+   border-radius: 15px;
+   color: white;
+}
+
+.intro-text {
+   font-size: 1.2rem;
+   line-height: 1.7;
+   margin-bottom: 2rem;
+}
+
+.artist-list {
+   margin: 1.5rem 0;
+   list-style-type: none;
+   padding: 0;
+}
+
+.artist-name {
+   color: #ff4d4d;
+   font-weight: 700;
+   display: inline-block;
+   width: 120px;
+}
+
+.skills-list {
+   margin: 1.5rem 0;
+   columns: 2;
+   column-gap: 2rem;
+}
+
+.skills-list li {
+   margin-bottom: 0.8rem;
+   position: relative;
+   padding-left: 1.5rem;
+}
+
+.skills-list li:before {
+   content: "•";
+   color: #ff4d4d;
+   position: absolute;
+   left: 0;
+}
+
+.contact-link {
+   color: #ff4d4d;
+   text-decoration: none;
+   font-weight: 700;
+   transition: 0.3s;
+}
+
+.contact-link:hover {
+   text-decoration: underline;
+}
+
+.audio-player {
+   width: 100%;
+   max-width: 250px;
+}
+.track-table {
+   margin-top: 20px;
+}
+.bpm-badge {
+   font-family: monospace;
+   background-color: #f8f9fa;
+   color: #333;
+   border: 1px solid #dee2e6;
+}
+.key-badge {
+   font-family: monospace;
+   background-color: #e9ecef;
+}
+
+#project h1{
+   font-family: "Honk", system-ui;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   font-variation-settings:
+     "MORF" 30,
+     "SHLN" 50;  
+}
+
+#projects{
+   padding: 50px;
+}
+
+.scroll-top {
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   z-index: 1000;
+   opacity: 0;
+   transition: opacity 0.3s;
+}
+.scroll-top.visible {
+   opacity: 1;
+}
+.section {
+   height: 100vh;
+   padding: 60px 0;
+}
